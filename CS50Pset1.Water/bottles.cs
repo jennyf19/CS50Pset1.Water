@@ -8,9 +8,21 @@ namespace CS50Pset1.Water
 {
     class Bottles
     {
-        
+
         public int numberOfBottles;
         public int showerLength;
+        private int input;
+
+        public Bottles(int input, out int numberOfBottles)
+        {
+            if (input <= 0)
+            {
+                Console.WriteLine("Please enter a value greater than 0");
+            }
+
+            this.input = input;
+            numberOfBottles = input * 12;
+        }
 
         public Bottles(string minutes, out int showerLength)
         {
@@ -19,16 +31,16 @@ namespace CS50Pset1.Water
 
         #region Methods
 
-        public int Shower(int showerLength)
-        {
-            if (showerLength <= 0)
-            {
-                Console.WriteLine("Please enter a value greater than 0");
-            }
-           else  numberOfBottles = (showerLength*12);
-            return numberOfBottles;
-            
-        }
+        /* public int Shower(int input)
+         {
+             if (input <= 0)
+             {
+                 Console.WriteLine("Please enter a value greater than 0");
+             }
+            else  numberOfBottles = input*12;
+             return numberOfBottles;
+
+         }*/
 
         #endregion
 
