@@ -15,6 +15,7 @@ namespace CS50Pset1.Water
 
         public Bottles(int input, out int numberOfBottles)
         {
+            //this is in case the user inputs something that is not a positive value
             if (input <= 0)
             {
                 Console.WriteLine("Please enter a value greater than 0");
